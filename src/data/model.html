@@ -1,0 +1,31 @@
+<script src="../../node_modules/axios/dist/axios.js"></script>
+<script src="./api.js"></script>
+<script>
+  let model = {
+    name      : 'model',
+    structure : {
+      name     : { // 车系
+        type     : 'string',
+        nullable : false,
+      },
+      brand_id : { // 品牌id
+        type     : 'integer',
+        positive : true,
+        nullable : false,
+      },
+    },
+  };
+  let m = {
+    model:'model',
+    property:'design_id',
+    structure:{
+      type:'integer',
+      nullable:true,
+    }
+  }
+  api('MODEL/CREATE_PROPERTY', m);
+
+  // api('MODEL/READ', model);
+
+  // api('MODEL/DELETE', { name : 'model' });
+</script>
