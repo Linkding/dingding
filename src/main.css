@@ -244,6 +244,8 @@ tbody tr:hover {
     color: #0B5A81;
     color: #ececec;
     color: #FFFFFF;
+    /* 注释的字 */
+    color: #a8abae; 
 }
 
 .dib{

@@ -84,22 +84,44 @@
 				<span class="desc">限时出售 | 性价比高</span>
 			</div>
 			<div class="card-group">
-				<div class="col-lg-2">
-					<img src="../assets/224x344.png" alt="">
+				<div class="col-lg-2" style="width:19.4444%">
+					<div class="col-card c1">
+						<div class="c1-title">仃仃保卖车</div>
+						<div class="c1-desc">限时出售 | 高性价比</div>
+					</div>
+					<!-- <img src="../assets/224x344.png" alt=""> -->
 				</div>
-				<div class="col-lg-2">
-					<img src="../assets/224x344.png" alt="">
+				<div class="col-lg-2" style="width:19.4444%">
+          			<div class="col-card c2">
+						<img src="../assets/home/card-1.png" alt="">
+						<div class="c2-title">选你所爱</div> 
+						<div class="c2-desc">3年内准新车</div> 
+					</div>
+					<!-- <img src="../assets/224x344.png" alt=""> -->
 				</div>
-				<div class="col-lg-6 y-img">
+				<div class="col-lg-5 y-img">
 					<div>
-						<img src="https://dummyimage.com/471x120" alt="">
+            			<div class="row-card c1">
+							<img src="../assets/home/card-1.png" alt="">
+							<div class="c1-title">选你所爱</div> 
+							<div class="c1-desc">3年内准新车</div> 
+						</div>
 					</div>
 					<div>
-						<img src="https://dummyimage.com/471x120" alt="">
+            			 <div class="row-card c2">
+							<img src="../assets/home/card-1.png" alt="">
+							<div class="c2-title">选你所爱</div> 
+							<div class="c2-desc">3年内准新车</div>
+						 </div>
 					</div>
 				</div>
-				<div class="col-lg-2">
-					<img src="../assets/224x344.png" alt="">
+				<div class="col-lg-2" style="width:19.4444%">
+          			<div class="col-card c2">
+						<img src="../assets/home/card-1.png" alt="">
+						<div class="c2-title">选你所爱</div> 
+						<div class="c2-desc">3年内准新车</div> 
+					</div>
+					<!-- <img src="../assets/224x344.png" alt=""> -->
 				</div>
 			</div>
         </div>
@@ -351,8 +373,19 @@ export default {
 .chanle-wrap .title{
 	margin: 16px 0;
 }
-.chanle-wrap .card-group >*{
+.chanle-wrap .card-group {
+  margin-right: -17px;
+}
+.chanle-wrap .card-group .col-card{
+  height: 300px;
+  width: 197px;
+  background: #fff;
 	padding: 0 8px;
+}
+.chanle-wrap .card-group .row-card{
+  width: 440px;
+  height: 144px;
+  background: #fff;
 }
 .chanle-wrap .card-group .y-img>* {
 	padding-bottom: 10px;
@@ -364,8 +397,76 @@ export default {
 	padding-right: 20px;
 }
 .chanle-wrap .title .desc {
-	font-size: 0.8rem;
+  font-size: 0.8rem;
+  color: #a8abae;
 }
+.chanle-wrap .col-card.c1,
+.chanle-wrap .col-card.c2,
+.chanle-wrap .row-card.c1,
+.chanle-wrap .row-card.c2{
+  position: relative;
+}
+.chanle-wrap .col-card.c1{
+	background: #0B5A81;
+}
+.chanle-wrap .col-card.c1 .c1-title{
+  position: absolute;
+  top:15%;
+  right: 21%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.15rem;
+}
+.chanle-wrap .col-card.c1 .c1-desc{
+	position: absolute;
+	top: 32%;
+	right: 22%;
+	font-size: 0.9rem;
+	color: #a8abae;
+}
+.chanle-wrap .col-card.c2 .c2-title{
+	position: absolute;
+	font-size: 1rem;
+	right: 35%;
+	top:55%;
+}
+.chanle-wrap .col-card.c2 .c2-desc {
+	position: absolute;
+	font-size: 1.1ren;
+	top: 67%;
+	right: 28%;
+	color: red;
+}
+.chanle-wrap .row-card.c1 .c1-title,
+.chanle-wrap .row-card.c2 .c2-title {
+	position: absolute;
+	font-size: 1rem;
+	top:25%;
+	right: 20%;
+}
+.chanle-wrap .row-card.c1 .c1-desc, 
+.chanle-wrap .row-card.c2 .c2-desc
+{
+	position: absolute;
+	font-size: 1.1ren;
+	top: 46%;
+	right: 18%;
+	color: red;
+}
+.chanle-wrap .col-card.c2 img{
+	position: relative;
+	top:19%;
+}
+.chanle-wrap .row-card.c1 img,
+.chanle-wrap .row-card.c2 img{
+	position: relative;
+	width: 230px;
+	height: 90px;
+	top: 15%;
+	left: 2%;
+}
+
 .vehicle-nav .item {
   padding: 10px;
   font-size: 1.6rem;
