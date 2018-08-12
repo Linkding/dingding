@@ -7,88 +7,101 @@
       </div>
       <div class="quick_check">
         <div class="container">
-          <div class="col-lg-2 wrap">
-            <span class="buy">买</span>
-            <span class="row tip">1年/2万公里质保</span>
-          </div>
-          <div class="col-lg-7 link-group">
+            <div class="col-lg-7 wrap">
+				<div class="title">我要买车 ></div>
+				<div class="link-group">
+					<div>
+						<div class="col-lg-1" v-for="(row,index) in brand_list" :key="index">
+							<router-link class="tag" :to="'/search/?brand_id=' + row.id" >
+								{{row.name}}
+							</router-link>
+						</div>
+					</div>
+					<div>
+						<div class="col-lg-1">
+							<span class="tag">3万以下</span>
+						</div>
+						<div class="col-lg-1">
+							<span class="tag">3-5万</span>
+						</div>
+						<div class="col-lg-1">
+							<span class="tag">5-10万</span>
+						</div>
+						<div class="col-lg-1">
+							<span class="tag">10-15万</span>
+						</div>
+						<div class="col-lg-1">
+							<span class="tag">15-20万</span>
+						</div>
+						<div class="col-lg-1">
+							<span class="tag">20-30万</span>
+						</div>
+					</div>
+					<div>
+						<div class="col-lg-1">
+							<span class="tag">降价车</span>
+						</div>
+						<div class="col-lg-1">
+							<span class="tag">准新车</span>
+						</div>
+						<div class="col-lg-1">
+							<span class="tag">紧凑车型</span>
+						</div>
+						<div class="col-lg-1">
+							<span class="tag">急售车</span>
+						</div>
+						<div class="col-lg-1">
+							<span class="tag">中大车型</span>
+						</div>
+						<div class="col-lg-1">
+							<span class="tag">豪华车型</span>
+						</div>
+					</div>
+				</div>
+				<div>
+					<SearchBar/>
+				</div>
+            </div>
+          <div class="col-lg-4 wrap">
+            <div class="title">我要卖车 ></div>
             <div>
-              <router-link to="'/search/?brand_id=' + row.id'" v-for="(row,index) in list.brand" :key="index">
-                {{row.name}}
-              </router-link>
-            </div>
-            
-            <div>
-              <span class="tag">3万以下</span>
-              <span class="tag">3-5万</span>
-              <span class="tag">5-10万</span>
-              <span class="tag">10-15万</span>
-              <span class="tag">15-20万</span>
-              <span class="tag">20-30万</span>
-              <span class="tag">30-60万</span>
-            </div>
-            <div>
-              <span class="tag">降价车</span>
-              <span class="tag">准新车</span>
-              <span class="tag">紧凑车型</span>
-              <span class="tag">急售车</span>
-              <span class="tag">中大车型</span>
-              <span class="tag">豪华车型</span>
-              <span class="tag">超值SUV</span>
-              <span class="tag">商务行政</span>
-              <span class="tag">经典跑车</span>
-            </div>
-            <div>
-              <!-- <input type="text" placeholder="请输入关键字">
-              <button type="submit">🔍</button> -->
-              <SearchBar/>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <span class="col-lg-3 sell">卖</span>
-            <div class="col-lg-9 right">
-              <a href="" style="margin-top: 15px; display: inline-block;" class="btn btn-primary btn-fat">极速卖车</a>
-            </div>
+				<input placeholder="请输入手机号" class="sell-input">
+			</div>
+			<div>
+				<span>
+					<button class="btn-fat">我要买车</button>
+					<button class="btn-fat">我要卖车</button>
+				</span>
+			</div>
           </div>
 
         </div>
       </div>
-      <div class="guaruntee">
-        <div class="row container">
-              <div class="col-lg-7">
-                <div class="col-lg-4">
-                  <div class="card">
-                    <div class="title">分期购车</div>
-                      <div class="desc">门槛低 审批快</div>
-                      <div>
-                        <img src="../assets/home/guarantee1.png" alt="">
-                      </div>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="card">
-                    <div class="title">分期购车</div>
-                      <div class="desc">门槛低 审批快</div>
-                      <div>
-                        <img src="../assets/home/guarantee1.png" alt="">
-                      </div>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="card">
-                    <div class="title">分期购车</div>
-                      <div class="desc">门槛低 审批快</div>
-                      <div>
-                        <img src="../assets/home/guarantee1.png" alt="">
-                      </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-5">
-                <div class="card">
-                  <div class="title">论坛</div>
-                </div>
-              </div>
+      <div class="chanle-wrap">
+        <div class="container">
+			<div class="title">
+				<span class="main">保卖车</span>
+				<span class="desc">限时出售 | 性价比高</span>
+			</div>
+			<div class="card-group">
+				<div class="col-lg-2">
+					<img src="../assets/224x344.png" alt="">
+				</div>
+				<div class="col-lg-2">
+					<img src="../assets/224x344.png" alt="">
+				</div>
+				<div class="col-lg-6 y-img">
+					<div>
+						<img src="https://dummyimage.com/471x120" alt="">
+					</div>
+					<div>
+						<img src="https://dummyimage.com/471x120" alt="">
+					</div>
+				</div>
+				<div class="col-lg-2">
+					<img src="../assets/224x344.png" alt="">
+				</div>
+			</div>
         </div>
       </div>
       <!-- 车列表 导航 -->
@@ -139,6 +152,7 @@
           </div>
         </div>
       </div>
+	  <Footer/>
   </div>
 </template>
 
@@ -146,18 +160,20 @@
 import '../css/vehicle.css';
 import Nav from "../components/Nav.vue";
 import SearchBar from "../components/SearchBar";
+import Footer from "../components/Footer";
 import api from "../lib/api";
 import Reader from "../mixin/Reader";
 
 export default {
-  components: { Nav, SearchBar },
+  components: { Nav, SearchBar ,Footer},
   mixins:[Reader],
   data() {
     return {
       list: [],
       main_list:[],
       model: "vehicle",
-      design:[],
+	  design:[],
+	  brand_list:[],
       
     };
   },
@@ -223,10 +239,19 @@ export default {
           
           this['main_list'] = r.data;
         })
-    },
+	},
+	read_brand(){
+		api('brand/read',{
+			where:{
+				is_recommend:true,
+			}
+		}).then(r=>{
+			this.brand_list= r.data;
+		})
+	}
   },
   mounted() {
-    this.read('brand');
+    this.read_brand();
     this.read_main('on_sale')
     this.find_design('SUV');
 
@@ -259,37 +284,49 @@ export default {
 }
 
 .quick_check .container .wrap {
-  padding: 0px 10px;
+  padding: 0px 20px;
 }
 
-.buy,
-.sell {
+ .quick_check .container .wrap .title{
   color: #0b5a81;
-  font-size: 4rem;
-  font-weight: bold;
+  font-size: 1.1rem;
+  /* margin-lesft: 15px; */
+  padding: 10px 0;
 }
 
+.quick_check .wrap .sell-input{
+	width: 100%;
+	margin: 20px 0;
+	border-radius: 2px;
+	background-color:rgba(0, 0, 0, 0.04);
+}
+.quick_check .wrap .btn-fat{
+	margin: 0 5px;
+	border-radius: 2px;
+	color: #fff;
+	opacity: .9;
+	
+}
+.quick_check .wrap .btn-fat:first-child{
+	background: #0B5A81;
+}
+.quick_check .wrap .btn-fat:last-child{
+	background: #E08109;
+}
 .tip {
   font-size: 0.8rem;
 }
-
-.tag {
-  display: inline-block;
-  padding: 0px 6px;
+.link-group{
+	margin-left: -13px;
 }
-
-.link-group {
-  padding:0 20px;
-}
-
 .link-group > * {
-  padding: 8px 0px;
-  font-size: 0.9rem;
+	padding: 8px 0px;
+	font-size: 1rem;
 }
 
-.link-group span,
-.link-group a{
-  padding: 0px 10px;
+.link-group .col-lg-1{
+	text-align: center;
+	width: 14.28%;
 }
 .link-group input {
   width: 45%;
@@ -308,39 +345,27 @@ export default {
 .link-group button:hover {
   background: #fd521d;
 }
-
-.guaruntee,
-.guaruntee .col-lg-4 {
-  padding: 15px 15px 15px 0;
-  background: #ddd;
+.chanle-wrap {
+	margin: 30px 0;
 }
-
-.guaruntee .col-lg-5 .card {
-  padding-right: 0px;
+.chanle-wrap .title{
+	margin: 16px 0;
 }
-
-.guaruntee .card {
-  padding: 15px;
-  background: #fff;
+.chanle-wrap .card-group >*{
+	padding: 0 8px;
 }
-
-.guaruntee .card > * {
-  padding: 10px;
+.chanle-wrap .card-group .y-img>* {
+	padding-bottom: 10px;
 }
-
-.guaruntee .card .title,
-.guaruntee .card .des {
-  padding: 8px 0;
+.chanle-wrap .title .main{
+	font-size: 1.1rem;
+	font-weight: 600;
+	padding: 5px;
+	padding-right: 20px;
 }
-
-.guaruntee .card .desc {
-  font-size: 0.9rem;
-  color: rgba(0, 0, 0, 0.6);
+.chanle-wrap .title .desc {
+	font-size: 0.8rem;
 }
-.guaruntee .card .title {
-  font-size: 1.5rem;
-}
-
 .vehicle-nav .item {
   padding: 10px;
   font-size: 1.6rem;
@@ -349,7 +374,10 @@ export default {
 }
 
 .vehicle-nav .item:hover {
-  background: rgba(0, 0, 0, 0.4);
+  background: #0b5a81;
+  color: #fff;
 }
-
+a {
+  color:#000;
+}
 </style>

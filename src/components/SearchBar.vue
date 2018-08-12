@@ -1,7 +1,9 @@
 <template>
     <form class="search-bar" @submit="submit($event);search($event)">
         <input @keyup="change()" type="search" placeholder="请输入关键字"  v-model="keyword">
-        <button type="submit">🔍</button>
+        <button type="submit">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
     </form>
 </template>
 <script>
@@ -67,7 +69,7 @@ button {
 }
 
 button:hover {
-  background: #181818;
+  color: #0B5A81;
 }
 </style>
 

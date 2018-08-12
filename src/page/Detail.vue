@@ -211,7 +211,7 @@ export default {
             report:{},
             report_structure:{},
             with:[
-                {model:'location',type:"has_one"}
+                {model:'location',relation:"has_one"}
             ]
       }
   },

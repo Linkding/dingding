@@ -3,7 +3,7 @@
         <Nav/>
         <div>
             <div>
-                <div class="container">
+                <div class="container search-area">
                     <SearchBar/>
                 </div>
             </div>
@@ -108,19 +108,23 @@
                 <div class="card-list">
                     <div class="col-lg-3" v-for="(row,index) in result" :key="index">
                         <div class="card" >
-                            <div class="thumbnail">
-                            <img :src="row.preview[0].url" alt="">
-                            </div>
-                            <div class="detail">
-                            <div class="title">{{row.title}}</div>
-                            <div class="desc">{{row.birth_day|only_day}} / {{row.consumed_distance}}万公里</div>
-                            <div class="other">
-                                <span class="price">{{row.price}}万</span>
-                                <span class="f-pay">首付{{row.price }}万</span>
-                                <!-- <span class="btn btn-primary btn-fat">购买</span> -->
-                            </div>
-                            </div>
-                        </div>
+							<div class="thumbnail">
+								<img :src="row.preview[0].url" alt="">
+							</div>
+                          	<div class="detail">
+                            	<div class="title">{{row.title}}</div>
+                            	<div class="desc">{{row.birth_day|only_day}} / {{row.consumed_distance}}万公里</div>
+                            	<div class="other">
+                              		<div class="col-lg-6">
+										<span class="price">{{row.price}}万</span>
+										<span class="f-pay">首付{{row.price }}万</span>
+									</div>
+									<div class="col-lg-6 right">
+										<router-link :to="'/detail/' + row.id" class="link">详情</router-link>
+									</div>
+                            	</div>
+                			</div>
+            			</div>
                     </div>
                 </div>
             </div>
@@ -336,6 +340,9 @@ export default {
 };
 </script>
 <style scoped>
+.search-area{
+	padding: 12px 0;
+}
 .fiflter,
 .vehicle-list {
   color: #495056;
