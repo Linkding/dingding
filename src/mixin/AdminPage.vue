@@ -6,9 +6,10 @@ import api from "../lib/api";
 import SearchBar from "../components/SearchBar";
 import DropDown from "../components/DropDown";
 import Location from "../components/Location";
+import Footer from "../components/Footer";
 
 export default {
-  components: { Nav, AdminNav, Pagination, SearchBar, DropDown,Location },
+  components: { Nav, AdminNav, Pagination, SearchBar, DropDown,Location, Footer },
   data() {
     return {
       total: 0, //共计多少条数据

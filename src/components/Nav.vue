@@ -16,7 +16,9 @@
                <router-link to="/signup" href="#" class="nav-item">注册</router-link>
              </span>
              <span v-else>
-               <span class="nav-item">{{uinfo.username ||uinfo.phone}}</span>
+               <router-link :to="to_admin()">
+                	<span class="nav-item" >{{uinfo.username ||uinfo.phone}}</span>
+               </router-link>
                <span class="nav-item" @click="logout">退出</span>
              </span>
                <a href="#" class="nav-item tel">400-666-6666</a>
@@ -38,6 +40,10 @@ export default {
   methods:{
     logout(){
       session.logout();
+    },
+    to_admin(){
+		if(this.uinfo.is_admin)
+			return {path:'/admin/user'}
     }
   },
   props: {

@@ -43,7 +43,10 @@ export default {
   components: { Nav },
   data() {
     return {
-      current: {},
+      current: {
+        $unique:'admin',
+        password:'123123'
+      },
       login_failed: false //是否登录失败
     };
   },

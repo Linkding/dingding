@@ -191,16 +191,18 @@
                 </div>
             </div>
         </div>
+        <Footer/>
     </div>
 </template>
 
 <script>
 import Nav from "../components/Nav";
 import ReportPanel from "../components/ReportPanel";
+import Footer from "../components/Footer";
 import api from "../lib/api";
 import session from '../lib/session';
 export default {
-  components: { Nav,ReportPanel },
+  components: { Nav,ReportPanel,Footer },
   data(){
       return {
             show_appo:false,

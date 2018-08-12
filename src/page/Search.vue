@@ -135,6 +135,7 @@
                 :currentPage="search_param.page"
                 />
         </div>
+        <Footer/>
     </div>
 </template>
 <script>
@@ -143,6 +144,7 @@ import Nav from "../components/Nav";
 import SearchBar from "../components/SearchBar";
 import DropDown from "../components/DropDown";
 import Pagination from "../components/Pagination";
+import Footer from "../components/Footer";
 import api from "../lib/api";
 import helper from "../lib/helper";
 import VehicleList from "../mixin/VehicleList";
@@ -150,7 +152,7 @@ import Reader from "../mixin/Reader";
 
 export default {
   mixins: [VehicleList, Reader],
-  components: { Nav, SearchBar, DropDown, Pagination },
+  components: { Nav, SearchBar, DropDown, Pagination, Footer },
   data() {
     return {
       design_list: [],
