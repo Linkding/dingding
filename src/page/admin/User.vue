@@ -9,7 +9,13 @@
                 <div class="col-lg-9">
                     <div class="wrapper">
                         <h2>用户列表</h2>
-                        <SearchBar :model="model" :isSearch="false" :onSubmit="search" :searchable="searchable"/>
+                        <SearchBar 
+                            :model="model" 
+                            :isSearch="false" 
+                            :onSubmit="search" 
+                            :searchable="searchable"
+                            :placeholder="'搜索：admin'"
+                        />
                         <div class="tool-bar">
                             <button @click="show_form= !show_form"><span v-if="show_form">收起</span><span v-else>创建用户</span></button>
                         </div>

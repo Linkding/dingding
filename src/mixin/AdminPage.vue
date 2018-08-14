@@ -92,7 +92,8 @@ export default {
     },
     search(keyword) {
       let param = {
-        or: {}
+        or: {},
+        with:this.with
       };
 
       this.searchable.forEach(prop => {

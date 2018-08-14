@@ -115,11 +115,11 @@
                             	<div class="title">{{row.title}}</div>
                             	<div class="desc">{{row.birth_day|only_day}} / {{row.consumed_distance}}万公里</div>
                             	<div class="other">
-                              		<div class="col-lg-6">
+                              		<div class="col-lg-8">
 										<span class="price">{{row.price}}万</span>
 										<span class="f-pay">首付{{row.price }}万</span>
 									</div>
-									<div class="col-lg-6 right">
+									<div class="col-lg-4 right">
 										<router-link :to="'/detail/' + row.id" class="link">详情</router-link>
 									</div>
                             	</div>

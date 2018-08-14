@@ -1,6 +1,6 @@
 <template>
     <form class="search-bar" @submit="submit($event);search($event)">
-        <input @keyup="change()" type="search" placeholder="请输入关键字"  v-model="keyword">
+        <input @keyup="change()" type="search" :placeholder="placeholder"  v-model="keyword">
         <button type="submit">
           <i class="fa fa-search" aria-hidden="true"></i>
         </button>
@@ -24,6 +24,7 @@ import api from "../lib/api";
         default (){}
       },
       onChange(){},
+      placeholder:{},
     },
     data(){
       return {

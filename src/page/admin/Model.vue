@@ -9,7 +9,13 @@
                 <div class="col-lg-9">
                     <div class="wrapper">
                         <h2>车系管理</h2>
-                        <SearchBar :model="model" :isSearch="false" :onSubmit="search" :searchable="searchable"/>
+                        <SearchBar 
+                            :model="model" 
+                            :isSearch="false" 
+                            :onSubmit="search" 
+                            :searchable="searchable"
+                            :placeholder="'例如：哈弗H6'"
+                        />
                         <!-- <form class="search-bar" @submit="search($event)">
                             <input type="search" placeholder="请输入关键字" autofocus v-model="keyword">
                             <button type="submit">🔍</button>

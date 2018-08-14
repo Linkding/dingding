@@ -9,7 +9,13 @@
                 <div class="col-lg-9">
                     <div class="wrapper">
                         <h2>品牌管理</h2>
-                        <SearchBar :model="model"  :isSearch="false" :onSubmit="search" :searchable="searchable"/>
+                        <SearchBar 
+                            :model="model"  
+                            :isSearch="false" 
+                            :onSubmit="search" 
+                            :searchable="searchable"
+                            :placeholder="'例如：马自达'"
+                        />
                         <div class="tool-bar">
                             <button @click="show_form= !show_form"><span v-if="show_form">收起</span><span v-else>创建品牌</span></button>
                         </div>

@@ -9,7 +9,13 @@
                 <div class="col-lg-10">
                     <div class="wrapper">
                         <h2>二手车列表</h2>
-                        <SearchBar :model="model" :isSearch="false" :onSubmit="search" :searchable="searchable"/>
+                        <SearchBar 
+                            :model="model" 
+                            :isSearch="false" 
+                            :onSubmit="search" 
+                            :searchable="searchable"
+                            :placeholder="'例如:标题'"
+                        />
                         <div class="tool-bar">
                             <button @click="show_form= !show_form"><span v-if="show_form">收起</span><span v-else>创建二手车</span></button>
                             <!-- <form class="search-bar" @submit="search($event)">
